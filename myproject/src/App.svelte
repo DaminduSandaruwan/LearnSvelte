@@ -1,18 +1,22 @@
 <script>
 	let name = 'Damindu Sandaruwan Bandara';
-	let color = 'Red';
+	let degree = 'Red';
 	let education='Undergraduate in University of Sri Jayewardhanapura';
 	const handlecolor = () => {
-		color = 'Black';
+		degree = 'BICT';
 	};
+	const degreeInput = (e) => {
+		degree = e.target.value;
+	}
 </script>
 
 <main>
 	<h1>Hi!</h1>
 	<h1>{name}!</h1>
 	<h3>{education}</h3>
-	<h3>{color}</h3>
-	<button on:click={handlecolor}>Update Color</button>
+	<h3>{degree}</h3>
+	<button on:click={handlecolor}>Update Degree</button>
+	<input type="text" on:input={degreeInput}>
 	
 </main>
 
