@@ -1,12 +1,12 @@
 <script>
 	let name = 'Damindu Sandaruwan Bandara';
-	let degree = 'Red';
+	let color = 'Red';
 	let education='Undergraduate in University of Sri Jayewardhanapura';
 	const handlecolor = () => {
-		degree = 'BICT';
+		color = 'Black';
 	};
-	const degreeInput = (e) => {
-		degree = e.target.value;
+	const colorInput = (e) => {
+		color = e.target.value;
 	}
 </script>
 
@@ -14,9 +14,12 @@
 	<h1>Hi!</h1>
 	<h1>{name}!</h1>
 	<h3>{education}</h3>
-	<h3>{degree}</h3>
+	<h3 style="color:{color}">{color}</h3>
 	<button on:click={handlecolor}>Update Degree</button>
-	<input type="text" on:input={degreeInput}>
+	<input type="text" on:input={colorInput} value={color}><br>
+	<!--Same as above-->
+	<input type="text" bind:value={color}>
+
 	
 </main>
 

@@ -5,3 +5,8 @@ create project - degit sveltejs/template myproject
 npm install
 
 to run project - npm run dev
+
+keywords ---
+    on:click
+    bind:value
+    
