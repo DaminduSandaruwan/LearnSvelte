@@ -3,13 +3,17 @@
 	let lastname = 'Sandaruwan';
 	let color = 'Red';
 
-	$: fullname=`${firstname} ${lastname}`;
+	$: fullname=`${firstname} ${lastname}`
+	$: {
+		console.log(fullname);
+		console.log(color);
+	}
 
 	let education='Undergraduate in University of Sri Jayewardhanapura';
 	const handlecolor = () => {
 		color = 'Black';
 	};
-	const colorInput = (e) => {
+	const colorInput  = (e) => {
 		color = e.target.value;
 	}
 </script>
