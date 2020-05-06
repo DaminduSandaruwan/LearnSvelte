@@ -8,18 +8,12 @@
 
 <main>
 	<h1>Loops</h1>
-	<div>
-		<h4>{people[0].name}</h4>
-		<p>{people[0].favcolor}</p>
-	</div>
-	<div>
-		<h4>{people[1].name}</h4>
-		<p>{people[1].favcolor}</p>
-	</div>
-	<div>
-		<h4>{people[2].name}</h4>
-		<p>{people[2].favcolor}</p>
-	</div>
+	{#each people as person}
+		<div>
+			<h4>Hi ... {person.name} .</h4>
+			<p>{person.age} years old. {person.favcolor} is favourite colour.</p>
+		</div>
+	{/each}
 </main>
 
 <style>

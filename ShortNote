@@ -10,3 +10,5 @@ keywords ---
     on:click
     bind:value
     
+    {#each people as person} //people is a list
+	{/each}
