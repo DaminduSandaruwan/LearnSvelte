@@ -1,18 +1,20 @@
 <script>
 	let people =[
-		{name: 'Damindu', favcolor:'black', age:25, id:1},
-		{name: 'Sandaruwan', favcolor:'red',age:23, id:2},
-		{name: 'Bandara', favcolor:'blue', age:22, id:3}
+		// {name: 'Damindu', favcolor:'black', age:25, id:1},
+		// {name: 'Sandaruwan', favcolor:'red',age:23, id:2},
+		// {name: 'Bandara', favcolor:'blue', age:22, id:3}
 	];
 </script>
 
 <main>
 	<h1>Loops</h1>
-	{#each people as person}
+	{#each people as person (person.id)}
 		<div>
 			<h4>Hi ... {person.name} .</h4>
 			<p>{person.age} years old. {person.favcolor} is favourite colour.</p>
 		</div>
+	{:else}
+		<p>There are no people to show</p>
 	{/each}
 </main>
 

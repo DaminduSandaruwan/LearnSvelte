@@ -11,4 +11,5 @@ keywords ---
     bind:value
     
     {#each people as person} //people is a list
+    {:else}
 	{/each}
