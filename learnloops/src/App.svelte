@@ -1,9 +1,15 @@
 <script>
 	let people =[
-		// {name: 'Damindu', favcolor:'black', age:25, id:1},
-		// {name: 'Sandaruwan', favcolor:'red',age:23, id:2},
-		// {name: 'Bandara', favcolor:'blue', age:22, id:3}
+		{name: 'Damindu', favcolor:'black', age:25, id:1},
+		{name: 'Sandaruwan', favcolor:'red',age:23, id:2},
+		{name: 'Bandara', favcolor:'blue', age:22, id:3}
 	];
+
+	const handleclick = (id) => {
+		// delete the person from people
+		console.log(id);
+ 
+	}
 </script>
 
 <main>
@@ -12,6 +18,9 @@
 		<div>
 			<h4>Hi ... {person.name} .</h4>
 			<p>{person.age} years old. {person.favcolor} is favourite colour.</p>
+			<button on:click={()=>{ 
+				console.log(`clicked me`);
+			}}>Delete</button>
 		</div>
 	{:else}
 		<p>There are no people to show</p>
