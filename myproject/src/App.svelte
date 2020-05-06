@@ -19,13 +19,11 @@
 </script>
 
 <main>
-
+	<h1>Hi</h1>
 	<p>{fullname} - {color} Color</p>
 	<input type="text" bind:value={firstname}>
 	<input type="text" bind:value={lastname}>
 	<input type="text" bind:value={color}>
-
-
 	
 </main>
 
