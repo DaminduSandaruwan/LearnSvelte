@@ -1,4 +1,7 @@
 <script>
+
+	import Offer from './modal.svelte';
+
 	let people =[
 		{name: 'Damindu', favcolor:'black', age:25, id:1},
 		{name: 'Sandaruwan', favcolor:'red',age:23, id:2},
@@ -24,6 +27,8 @@
 {:else}
 	<p>Not greater than 5</p>
 {/if}
+
+<Offer/>
 
 <main>
 
