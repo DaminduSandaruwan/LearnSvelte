@@ -31,6 +31,9 @@
 	{#each people as person (person.id)}
 		<div>
 			<h4>Hi ... {person.name} .</h4>
+			{#if person.favcolor === 'black'}
+				<p><strong>MASTER black</strong></p>			
+			{/if}
 			<p>{person.age} years old. {person.favcolor} is favourite colour.</p>
 			<button on:click={(e)=>{ 
 				handleclick(e, person.id)
