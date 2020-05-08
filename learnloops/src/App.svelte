@@ -20,9 +20,7 @@
 
 </script>
 
-
-
-<Offer/>
+<Offer message="Hey, I am prop value"/>
 
 <main>
 
@@ -42,6 +40,8 @@
 		<p>There are no people to show</p>
 	{/each}
 </main>
+
+
 
 <style>
 	main {
