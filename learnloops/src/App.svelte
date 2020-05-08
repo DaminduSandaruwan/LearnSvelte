@@ -30,7 +30,7 @@
 
 <main>
 
-	<button on:click={toggleModal}>Open Modal</button>
+	<button on:click|once={toggleModal}>Open Modal</button>
 
 	<h1>Loops</h1>
 	{#each people as person (person.id)}
