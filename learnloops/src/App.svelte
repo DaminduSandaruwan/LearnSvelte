@@ -20,7 +20,7 @@
 
 </script>
 
-<Offer message="Hey, I am prop value"/>
+<Offer message="Hey, I am prop value" isPromo={true}/>
 
 <main>
 
