@@ -1,6 +1,7 @@
 <script>
 
 	import Offer from './modal.svelte';
+	import AddPersonForm from './AddPersonForm.svelte';
 
 	let showModal = false;
 
@@ -27,15 +28,17 @@
 </script>
 
 <Offer message="Hey, I am prop value" isPromo={true} {showModal} on:click={toggleModal}>
-	<!--<h3>Add a New Person</h3>-->
+	<!-- <h3>Add a New Person</h3>
 	<form>
 		<input type="text" placeholder="name">
 		<input type="text" placeholder="favourite color">
 		<button>Add Person</button>
-	</form>
-	<div slot="title">
+	</form> -->
+	<!-- <div slot="title">
 		<h3>Add a New Person</h3>
-	</div>
+	</div> -->
+
+	<AddPersonForm/>
 </Offer>
 
 <main>
