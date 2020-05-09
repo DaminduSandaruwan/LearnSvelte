@@ -1,4 +1,9 @@
 <script>
+
+    import {createEventDispatcher} from 'svelte';
+
+    let dispatch = createEventDispatcher();
+
     let name;
     let favColour;
     let age;
@@ -9,9 +14,20 @@
     let skills=[];
 
     const handleSubmit=()=>{
+        
+        const person = {
+            name,
+            favColour,
+            age,
+            skills,
+            id:Math.random()
+        }
+        dispatch('addPerson',person);
+
         console.log(name,favColour,age);
         // console.log(soft,net,mul);
         console.log(skills);
+
     }
 </script>
 
@@ -36,6 +52,7 @@
         <option value="red">Red</option>
         <option value="blue">Blue</option>
     </select>
+
     <button>Add Person</button>
 </form>
 

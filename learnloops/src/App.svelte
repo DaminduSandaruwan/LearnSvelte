@@ -10,9 +10,9 @@
 	}
 
 	let people =[
-		{name: 'Damindu', favcolor:'black', age:25, id:1},
-		{name: 'Sandaruwan', favcolor:'red',age:23, id:2},
-		{name: 'Bandara', favcolor:'blue', age:22, id:3}
+		{name: 'Damindu', favColour:'black', age:25, id:1},
+		{name: 'Sandaruwan', favColour:'red',age:23, id:2},
+		{name: 'Bandara', favColour:'blue', age:22, id:3}
 	];
 
 	const handleclick = (e,id) => {
@@ -23,7 +23,13 @@
 
 	}
 
+	const addPerson=(e)=>{
+		console.log(e.detail);
 
+		const person = e.detail;
+		people=[person, ...people];
+		showModal=false;
+	}
 
 </script>
 
@@ -38,7 +44,7 @@
 		<h3>Add a New Person</h3>
 	</div> -->
 
-	<AddPersonForm/>
+	<AddPersonForm on:addPerson={addPerson}/>
 </Offer>
 
 <main>
@@ -49,10 +55,10 @@
 	{#each people as person (person.id)}
 		<div>
 			<h4>Hi ... {person.name} .</h4>
-			{#if person.favcolor === 'black'}
+			{#if person.favColour === 'black'}
 				<p><strong>MASTER black</strong></p>			
 			{/if}
-			<p>{person.age} years old. {person.favcolor} is favourite colour.</p>
+			<p>{person.age} years old. {person.favColour} is favourite colour.</p>
 			<button on:click={(e)=>{ 
 				handleclick(e, person.id)
 			}}>Delete</button>
