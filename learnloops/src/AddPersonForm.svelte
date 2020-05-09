@@ -2,13 +2,16 @@
     let name;
     let favColour;
     let age;
-    let soft =false;
-    let net =false;
-    let mul =false;
+    // let soft =false;
+    // let net =false;
+    // let mul =false;
+
+    let skills=[];
 
     const handleSubmit=()=>{
         console.log(name,favColour,age);
-        console.log(soft,net,mul);
+        // console.log(soft,net,mul);
+        console.log(skills);
     }
 </script>
 
@@ -18,9 +21,13 @@
     <input type="text" placeholder="favourite color" bind:value={favColour}>
     <input type="number" placeholder="age" bind:value={age}>
     <label>Skills : </label>
-    <input type="checkbox" bind:checked={soft}>Software<br>
+    <!-- <input type="checkbox" bind:checked={soft}>Software<br>
     <input type="checkbox" bind:checked={net}>Networking <br>
-    <input type="checkbox" bind:checked={mul}>Multimedia <br>
+    <input type="checkbox" bind:checked={mul}>Multimedia <br> -->
+
+    <input type="checkbox" bind:group={skills} value="software">Software<br>
+    <input type="checkbox" bind:group={skills} value="networking">Networking <br>
+    <input type="checkbox" bind:group={skills} value="multimedia">Multimedia <br>
     <button>Add Person</button>
 </form>
 
