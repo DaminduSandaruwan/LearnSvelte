@@ -28,6 +28,14 @@
     <input type="checkbox" bind:group={skills} value="software">Software<br>
     <input type="checkbox" bind:group={skills} value="networking">Networking <br>
     <input type="checkbox" bind:group={skills} value="multimedia">Multimedia <br>
+    
+    <label>Select Color : </label>
+    <select bind:value={favColour}>
+        <option value="black">Black</option>
+        <option value="orange">Orange</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
     <button>Add Person</button>
 </form>
 
