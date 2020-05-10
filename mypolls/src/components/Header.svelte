@@ -18,4 +18,4 @@
     img{
         max-width: 180px;;
     }
-</style>
+</style>   

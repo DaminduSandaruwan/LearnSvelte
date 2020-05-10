@@ -1,12 +1,13 @@
 <script>
 	import Header from './components/Header.svelte';
+	import Footer from './components/Footer.svelte';
 </script>
 
 <Header/>
 <main>
 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat unde atque obcaecati laborum optio deserunt vero numquam a ab. Fugit sapiente asperiores doloribus necessitatibus enim quam dolor earum sit quos.</p>
 </main>
-
+<Footer/>
 <style>
 	main{
 		max-width: 960px;
