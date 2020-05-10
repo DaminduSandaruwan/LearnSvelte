@@ -1,12 +1,19 @@
 <script>
 	import Header from './components/Header.svelte';
 	import Footer from './components/Footer.svelte';
+	import Tabs from './shared/Tabs.svelte';
+
+	//tabs
+	let items = ['Current Polls', 'Add New Poll'];
+	let activeItem = 'Current Polls';
+
 </script>
 
 <Header/>
 <main>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat unde atque obcaecati laborum optio deserunt vero numquam a ab. Fugit sapiente asperiores doloribus necessitatibus enim quam dolor earum sit quos.</p>
+	<Tabs {activeItem} {items}/>
 </main>
+
 <Footer/>
 <style>
 	main{
