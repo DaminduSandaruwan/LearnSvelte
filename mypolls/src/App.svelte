@@ -12,17 +12,17 @@
 		activeItem=e.detail;		
 	}
 
-	//polls
-	let polls = [
-		{
-			id:1,
-			question: 'Python or JavaScript ?',
-			answerA: 'Python',
-			answerB: 'JavaScript',
-			votesA: 9,
-			votesB: 15,
-		},
-	];
+	// polls
+	// let polls = [
+	// 	{
+	// 		id:1,
+	// 		question: 'Python or JavaScript ?',
+	// 		answerA: 'Python',
+	// 		answerB: 'JavaScript',
+	// 		votesA: 9,
+	// 		votesB: 15,
+	// 	},
+	// ];
 
 	const handleAdd = (e) =>{
 		const poll = e.detail;
@@ -52,7 +52,8 @@
 	<Tabs {activeItem} {items} on:tabChange={tabChange}/>
 	{#if activeItem==='Current Polls'}
 		<!-- <p>Polls List component goes here....</p> -->
-		<PollList {polls} on:vote={handleVote}/>
+		<!-- <PollList {polls} on:vote={handleVote}/> -->
+		<PollList on:vote={handleVote}/>
 
 	{:else if activeItem==='Add New Poll'}
 		<!-- <p>New Polls Form component goes here....</p> -->
