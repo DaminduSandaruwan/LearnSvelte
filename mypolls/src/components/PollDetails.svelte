@@ -7,6 +7,8 @@
 
     //reactive values
     $: totalVotes = poll.votesA + poll.votesB;
+    $: percentA = Math.floor(100 / totalVotes * poll.votesA);
+    $: percentB = Math.floor(100 / totalVotes * poll.votesB);
 
     //handling vote
     const handleVote = (option, id) =>{
@@ -20,11 +22,11 @@
         <h3>{poll.question}</h3>
         <p>Total Votes : {totalVotes}</p>
         <div class="answer" on:click={()=> handleVote('a',poll.id)}>
-            <div class="percent-a"></div>
+            <div class="percent percent-a" style="width:{percentA}%"></div>
             <span>{poll.answerA}({poll.votesA})</span>
         </div>
         <div class="answer" on:click={()=> handleVote('b',poll.id)}>
-            <div class="percent-b"></div>
+            <div class="percent percent-b" style="width:{percentB}%"></div>
             <span>{poll.answerB}({poll.votesB})</span>
         </div>
     </div>  
@@ -55,4 +57,20 @@
         display: inline-block;
         padding: 10px 20px;
     }
+    .percent{
+        height: 100%;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .percent-a{
+        /* width: 25%; */
+        background: rgba(217,27,33,0.2);  
+        border-left: 4px solid #d91b42;      
+    }
+    .percent-b{
+        /* width: 75%; */
+        background: rgba(69,196,150,0.2);
+        border-left: 4px solid #45c496; 
+    }
+
 </style>
