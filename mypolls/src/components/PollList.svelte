@@ -2,6 +2,7 @@
     // import {onMount, onDestroy} from 'svelte';
     import PollStore from '../stores/PollStore.js';
     import PollDetails from './PollDetails.svelte';
+    import {fade,slide,scale} from 'svelte/transition';
 
     // export let polls = [];
 
@@ -26,7 +27,14 @@
     {#each $PollStore as poll (poll.id)}
         <!-- <div>{poll.question}</div> -->
         <!-- <PollDetails {poll} on:vote/> -->
-        <PollDetails {poll}/>
+
+        <!-- <div transition:fade> -->
+        <!-- <div in:fade> -->
+        <!-- <div in:fade out:scale> -->
+        <!-- <div in:fade out:slide> -->
+        <div in:fade out:scale|local>
+            <PollDetails {poll}/>
+        </div>
     {/each}
  </div>
 
