@@ -7,7 +7,7 @@ import PollDetails from './PollDetails.svelte';
 <div class="poll-list">
     {#each polls as poll (poll.id)}
         <!-- <div>{poll.question}</div> -->
-        <PollDetails {poll}/>
+        <PollDetails {poll} on:vote/>
     {/each}
  </div>
 
