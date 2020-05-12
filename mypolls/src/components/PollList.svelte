@@ -1,8 +1,10 @@
 <script>
     // import {onMount, onDestroy} from 'svelte';
     import PollStore from '../stores/PollStore.js';
+    import { flip } from 'svelte/animate';
     import PollDetails from './PollDetails.svelte';
     import {fade,slide,scale} from 'svelte/transition';
+    
 
     // export let polls = [];
 
@@ -20,19 +22,12 @@
     //     console.log('component destroy');
     //     unsub();
     // });
-    
+    const options = {};
 </script>
 
 <div class="poll-list">
     {#each $PollStore as poll (poll.id)}
-        <!-- <div>{poll.question}</div> -->
-        <!-- <PollDetails {poll} on:vote/> -->
-
-        <!-- <div transition:fade> -->
-        <!-- <div in:fade> -->
-        <!-- <div in:fade out:scale> -->
-        <!-- <div in:fade out:slide> -->
-        <div in:fade out:scale|local>
+        <div in:fade out:scale|local animate:flip={{duration:500}}>
             <PollDetails {poll}/>
         </div>
     {/each}
