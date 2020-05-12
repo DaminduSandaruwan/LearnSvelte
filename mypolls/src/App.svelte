@@ -25,25 +25,25 @@
 	// ];
 
 	const handleAdd = (e) =>{
-		const poll = e.detail;
-		polls = [poll, ...polls];
-		console.log(polls);
+		// const poll = e.detail;
+		// polls = [poll, ...polls];
+		// console.log(polls);
 		activeItem ='Current Polls';
 	}
 
-	const handleVote = (e) =>{
-		const {id, option} = e.detail;
-		let copiedPolls = [...polls];
-		let upvotedPoll = copiedPolls.find((poll)=>poll.id == id);
-		if(option ===  'a'){
-			upvotedPoll.votesA++;
-		}
-		if(option ===  'b'){
-			upvotedPoll.votesB++;
-		}
+	// const handleVote = (e) =>{
+		// const {id, option} = e.detail;
+		// let copiedPolls = [...polls];
+		// let upvotedPoll = copiedPolls.find((poll)=>poll.id == id);
+		// if(option ===  'a'){
+		// 	upvotedPoll.votesA++;
+		// }
+		// if(option ===  'b'){
+		// 	upvotedPoll.votesB++;
+		// }
 
-		polls = copiedPolls;
-	}
+		// polls = copiedPolls;
+	// }
 
 </script>
 
@@ -53,7 +53,8 @@
 	{#if activeItem==='Current Polls'}
 		<!-- <p>Polls List component goes here....</p> -->
 		<!-- <PollList {polls} on:vote={handleVote}/> -->
-		<PollList on:vote={handleVote}/>
+		<!-- <PollList on:vote={handleVote}/> -->
+		<PollList/>
 
 	{:else if activeItem==='Add New Poll'}
 		<!-- <p>New Polls Form component goes here....</p> -->

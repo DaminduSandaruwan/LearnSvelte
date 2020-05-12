@@ -25,7 +25,8 @@
 <div class="poll-list">
     {#each $PollStore as poll (poll.id)}
         <!-- <div>{poll.question}</div> -->
-        <PollDetails {poll} on:vote/>
+        <!-- <PollDetails {poll} on:vote/> -->
+        <PollDetails {poll}/>
     {/each}
  </div>
 
