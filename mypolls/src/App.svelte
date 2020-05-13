@@ -45,12 +45,12 @@
 		// polls = copiedPolls;
 	// }
 
-	import {tweened} from 'svelte/motion';
-	const value = tweened(0);
+	// import {tweened} from 'svelte/motion';
+	// const value = tweened(0);
 
 </script>
 
-<button on:click={()=>value.set(1)}>{$value}</button>
+<!-- <button on:click={()=>value.set(1)}>{$value}</button> -->
 
 <Header/>
 <main>
