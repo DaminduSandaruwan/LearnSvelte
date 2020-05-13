@@ -4,7 +4,7 @@
 	import PollList from './components/PollList.svelte';
 	import Tabs from './shared/Tabs.svelte';
 	import CreatePollForm from './components/CreatePollForm.svelte';
-
+	
 	//tabs
 	let items = ['Current Polls', 'Add New Poll'];
 	let activeItem = 'Current Polls';
@@ -45,7 +45,12 @@
 		// polls = copiedPolls;
 	// }
 
+	import {tweened} from 'svelte/motion';
+	const value = tweened(0);
+
 </script>
+
+<button on:click={()=>value.set(1)}>{$value}</button>
 
 <Header/>
 <main>
